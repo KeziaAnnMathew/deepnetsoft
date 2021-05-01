@@ -1,0 +1,14 @@
+
+
+<div class="container">
+<div class="section">
+    <h1>Login</h1>
+    <form (ngSubmit)="validateUser()">
+        <div [class.d-none] class="alert alert-danger" *ngIf="errorval">User Not Found</div>
+        <input type="text" name="username" id="" placeholder="Username" [(ngModel)]="user.uname" required ><br>
+        <input type="password" name="password" id="" placeholder="Password" [(ngModel)]="user.password" required ><br>
+        <button type="submit">Login</button>
+    </form>
+</div>
+   
+</div>

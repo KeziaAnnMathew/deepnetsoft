@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.addproduct{
+    padding: 10px;
+    margin-left: 60%;
+}
+.filter{
+    padding: 10px;
+}
+.tableproducts{
+    padding: 10px;
+}
+table{
+    border: 1px solid black;
+    outline: auto;
+}
+th,td{
+    border: 1px solid black;
+}
+
+.latestproducts{
+    padding: 10px;
+    display:flex;
+}
+.productbox{
+    border: 1px solid black;
+    width: 120px;
+    height: 120px;
+    margin:5px
+}

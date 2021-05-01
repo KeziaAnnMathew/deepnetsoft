@@ -1,0 +1,46 @@
+<div class="container"> 
+    <h1>Dashboard</h1>
+    <div class="addproduct">
+        <button (click)="addProduct()">Add Product</button>
+    </div>
+    <div class="filter">
+        <input name="searchkey" [(ngModel)]='searchkey' type="search" (ngModelChange)="onsearch($event)" placeholder="Search">
+        <select name="categorykey" [(ngModel)]='categorykey' id="">
+            <option value="" disabled selected>Category</option>
+            <option value="Smart Phone">Mobiles</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Cosmetics">Cosmetics</option>
+        </select>
+        <button (click)="onsearchcategory(categorykey)">Search</button>
+    </div>
+    <div class="tableproducts">
+        <table>
+            <tr>
+                <th><input type="checkbox" name="" id=""></th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr *ngFor="let product of productsdummy | filterquery:filterName:'name' ">
+                <td><input type="checkbox" name="" id=""></td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>edit</td>
+                <td>delete</td>
+            </tr>
+        </table>
+    </div>
+    <h2>Latest Products</h2><br>
+    <div class="latestproducts">
+        
+        <div class="listlatest" *ngFor="let product of latest">
+            <div class="productbox">
+                <p>{{product.name}}</p>
+                <p>{{product.price}}</p>
+            </div>
+        </div>
+       
+
+    </div>
+</div>
